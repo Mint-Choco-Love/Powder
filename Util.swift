@@ -5,8 +5,9 @@ struct Util {
         var ret = [String]()
         
         func dfs(_ cur: XMLElement) {
-            if let name = cur.name, let src = cur.attribute(forName: "src")?.stringValue {
-                if name.lowercased() == "img" {
+            if let id = cur.attribute(forName: "id")?.stringValue, let src = cur.attribute(forName: "src")?.stringValue {
+                if id.lowercased() == "pdf" {
+                    print(src)
                     ret.append(src)
                 }
             }

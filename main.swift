@@ -1,7 +1,6 @@
 import Foundation
 
-//let test = "https://developer.apple.com/documentation/coredata"
-let test = readLine() ?? ""
-let htmlString = Crawler().getHTML(url: test)
-let temp = Util.getImgURLs(htmlString ?? "")
-ImageExtractor().extract(urls: temp)
+print("example: 10.1145/253769.253798")
+print("> ", terminator: "")
+let input = readLine() ?? ""
+SciHub.doi(url: input)
